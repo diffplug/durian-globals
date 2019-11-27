@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.MF text eol=crlf
+*.jar binary
+*.png binary

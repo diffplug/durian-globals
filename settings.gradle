@@ -1,0 +1,4 @@
+rootProject.name = 'durian-globals-root'
+
+include 'durian-globals'
+include 'durian-globals.dev'
