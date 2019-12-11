@@ -4,3 +4,7 @@ ext.maven_desc="Developer API for testable globals (don't ship!)"
 apply from: 干.file('base/java8.gradle')
 apply from: 干.file('base/maven.gradle')
 apply from: 干.file('spotless/java.gradle')
+
+dependencies {
+	implementation project(':durian-globals')
+}
