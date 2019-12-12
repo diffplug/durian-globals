@@ -30,8 +30,8 @@ public class TimeDevTest {
 
 	@Test
 	public void _02_realtime() throws Exception {
-		try (AutoCloseable wipeGlobals = GlobalsHarness.wipe()) {
-			DevTime devTime = DevTime.install();
+		try (AutoCloseable wipeGlobals = GlobalsDev.wipe()) {
+			TimeDev devTime = TimeDev.install();
 			devTime.set(123);
 			Assertions.assertThat(Time.now()).isEqualTo(123);
 			devTime.set(-456);
@@ -47,8 +47,8 @@ public class TimeDevTest {
 
 	@Test
 	public void _04_cant_install_after_init() {
-		Assertions.assertThatThrownBy(DevTime::install)
+		Assertions.assertThatThrownBy(TimeDev::install)
 				.isExactlyInstanceOf(IllegalStateException.class)
-				.hasMessage("Unable to install com.diffplug.common.globals.DevTime because com.diffplug.common.globals.Time$Prod was already installed.");
+				.hasMessage("Unable to install com.diffplug.common.globals.TimeDev because com.diffplug.common.globals.Time$Prod was already installed.");
 	}
 }

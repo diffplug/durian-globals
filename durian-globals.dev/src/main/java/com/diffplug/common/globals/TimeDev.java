@@ -24,9 +24,9 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Testing implementation of {@link com.diffplug.common.globals.Time} for use with {@link
- * com.diffplug.common.globals.GlobalsHarness}.
+ * com.diffplug.common.globals.GlobalsDev}.
  */
-public class DevTime extends Time {
+public class TimeDev extends Time {
 	private volatile long now;
 
 	@Override
@@ -35,11 +35,11 @@ public class DevTime extends Time {
 	}
 
 	/** Creates and installs a DevTime instance. */
-	public static DevTime install() {
-		return GlobalsHarness.install(Time.class, new DevTime());
+	public static TimeDev install() {
+		return GlobalsDev.install(Time.class, new TimeDev());
 	}
 
-	private DevTime() {}
+	private TimeDev() {}
 
 	/** Sets {@link com.diffplug.common.globals.Time#now()} to the given value. */
 	public synchronized void set(long to) {
