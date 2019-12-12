@@ -6,5 +6,8 @@ apply from: 干.file('base/maven.gradle')
 apply from: 干.file('spotless/java.gradle')
 
 dependencies {
-	implementation project(':durian-globals')
+	implementation     project(':durian-globals')
+	testImplementation project(':durian-globals.dev')
+	testImplementation 'junit:junit:4.12'
+	testImplementation 'org.assertj:assertj-core:3.11.1'
 }

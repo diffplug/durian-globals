@@ -33,7 +33,7 @@ public class GlobalsHarness {
 		if (actual == value) {
 			return value;
 		} else {
-			throw new IllegalStateException("Unable to install " + value.getClass() + " because " + actual.getClass() + " was already installed.");
+			throw new IllegalStateException("Unable to install " + value.getClass().getName() + " because " + actual.getClass().getName() + " was already installed.");
 		}
 	}
 }
