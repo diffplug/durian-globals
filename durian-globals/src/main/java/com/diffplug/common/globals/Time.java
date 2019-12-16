@@ -15,6 +15,12 @@
  */
 package com.diffplug.common.globals;
 
+
+import java.time.Clock;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+
 /** Alias for {@link System#currentTimeMillis}, but can be manipulated within tests by {@link DevTime}. */
 public abstract class Time {
 	// package-private to prevent others from implementing
@@ -25,6 +31,39 @@ public abstract class Time {
 	/** Alias for {@link System#currentTimeMillis}, but can be manipulated within tests by {@link DevTime}. */
 	public static long now() {
 		return Globals.getOrSetTo(Time.class, Prod::new).getNow();
+	}
+
+	/** Returns a {@link Clock} in the given timezone, which uses {@link Time#now} as its source of truth. */
+	public static Clock clock(ZoneId zone) {
+		return new ClockImpl(zone);
+	}
+
+	/** Returns UTC {@link Clock} which uses {@link Time#now} as its source of truth. */
+	public static Clock clockUtc() {
+		return clock(ZoneOffset.UTC);
+	}
+
+	private static class ClockImpl extends Clock {
+		private final ZoneId zoneId;
+
+		private ClockImpl(ZoneId zoneId) {
+			this.zoneId = zoneId;
+		}
+
+		@Override
+		public ZoneId getZone() {
+			return zoneId;
+		}
+
+		@Override
+		public Clock withZone(ZoneId zone) {
+			return new ClockImpl(zone);
+		}
+
+		@Override
+		public Instant instant() {
+			return Instant.ofEpochMilli(now());
+		}
 	}
 
 	private static class Prod extends Time {
