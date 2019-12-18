@@ -5,6 +5,44 @@ plugins {
 	id 'com.diffplug.gradle.osgi.bndmanifest' version '3.17.6' apply false
 	id 'com.jfrog.bintray' version '1.8.4' apply false
 	id 'com.diffplug.blowdryer'
+	id 'com.diffplug.spotless-changelog' version '0.6.0'
 }
 
 apply from: 干.file('spotless/freshmark.gradle')
+
+spotlessChangelog {
+	ifFoundBumpMinor '### Added'
+	ifFoundBumpMajor '**BREAKING**'
+}
+
+subprojects {
+	apply from: 干.file('base/java8.gradle')
+	if (it.name == 'durian-globals') {
+		ext.maven_name='DurianGlobals'
+		ext.maven_desc='Testable globals'
+		dependencies {
+			implementation 'com.diffplug.durian:durian-collect:1.2.0'
+		}
+	} else {
+		ext.maven_name='DurianGlobals (Dev API)'
+		ext.maven_desc="Developer API for testable globals (don't ship!)"
+		dependencies {
+			implementation     project(':durian-globals')
+			testImplementation 'junit:junit:4.12'
+			testImplementation 'org.assertj:assertj-core:3.11.1'
+		}
+	}
+	apply from: 干.file('base/changelog.gradle')
+	apply from: 干.file('base/maven.gradle')
+	apply from: 干.file('spotless/java.gradle')
+}
+
+gradle.taskGraph.whenReady { taskGraph ->
+	def changelogPushTasks = taskGraph.allTasks.stream()
+			.filter { t -> t.name == 'changelogPush' }
+			.map { t -> t.path }
+			.toList()
+	if (changelogPushTasks.size() > 1) {
+		throw new IllegalArgumentException("Run changelogPush one at a time:\n" + changelogPushTasks.join('\n'))
+	}
+}
