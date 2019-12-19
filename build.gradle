@@ -11,6 +11,7 @@ apply from: 干.file('spotless/freshmark.gradle')
 subprojects {
 	version = '0.1.0'
 	apply from: 干.file('base/java8.gradle')
+	apply plugin: 'java-library'
 	if (it.name == 'durian-globals') {
 		ext.maven_name='DurianGlobals'
 		ext.maven_desc='Testable globals'
@@ -21,7 +22,7 @@ subprojects {
 		ext.maven_name='DurianGlobals (Dev API)'
 		ext.maven_desc="Developer API for testable globals (don't ship!)"
 		dependencies {
-			implementation     project(':durian-globals')
+			api                project(':durian-globals')
 			testImplementation 'junit:junit:4.12'
 			testImplementation 'org.assertj:assertj-core:3.11.1'
 		}
