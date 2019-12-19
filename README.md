@@ -1,13 +1,27 @@
 # <img align="left" src="logo.png"> DurianGlobals: Easy-to-test singletons
 
-[![Maven artifact](https://img.shields.io/badge/mavenCentral-com.diffplug.durian%3Adurian--swt-blue.svg)](https://bintray.com/diffplug/opensource/durian-swt/view)
-[![Latest version](https://img.shields.io/badge/latest-3.3.0-blue.svg)](https://github.com/diffplug/durian-swt/releases/latest)
-[![Javadoc](https://img.shields.io/badge/javadoc-OK-blue.svg)](https://diffplug.github.io/durian-swt/javadoc/3.3.0/)
-[![License Apache](https://img.shields.io/badge/license-Apache-blue.svg)](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0))
 
-[![Changelog](https://img.shields.io/badge/changelog-3.4.0--SNAPSHOT-brightgreen.svg)](CHANGES.md)
-[![Travis CI](https://travis-ci.org/diffplug/durian-swt.svg?branch=master)](https://travis-ci.org/diffplug/durian-swt)
-[![Live chat](https://img.shields.io/badge/gitter-live_chat-brightgreen.svg)](https://gitter.im/diffplug/durian)
+<!---freshmark shields
+output = [
+    link(shield('Maven central', 'mavencentral', 'com.diffplug.durian-globals:durian-globals', 'blue'), 'https://search.maven.org/search?q=g:com.diffplug%20AND%20a:durian-globals'),
+    link(shield('Apache 2.0', 'license', 'apache-2.0', 'blue'), 'https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)'),
+    '',
+    link(image('Latest', 'https://jitpack.io/v/diffplug/durian-globals.svg'), 'https://jitpack.io/#diffplug/durian-globals'),
+    link(shield('Changelog', 'keepachangelog', 'yes', 'brightgreen'), 'CHANGELOG.md'),
+    link(shield('Javadoc', 'javadoc', 'yes', 'brightgreen'), 'https://jitpack.io/com/github/diffplug/durian-globals/latest/javadoc/'),
+    link(shield('Live chat', 'gitter', 'chat', 'brightgreen'), 'https://gitter.im/diffplug/durian-globals'),
+    link(image('JitCI', 'https://jitci.com/gh/diffplug/durian-globals/svg'), 'https://jitci.com/gh/diffplug/durian-globals')
+    ].join('\n');
+-->
+[![Maven central](https://img.shields.io/badge/mavencentral-com.diffplug.durian--globals%3Adurian--globals-blue.svg)](https://search.maven.org/search?q=g:com.diffplug%20AND%20a:durian-globals)
+[![Apache 2.0](https://img.shields.io/badge/license-apache--2.0-blue.svg)](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0))
+
+[![Latest](https://jitpack.io/v/diffplug/durian-globals.svg)](https://jitpack.io/#diffplug/durian-globals)
+[![Changelog](https://img.shields.io/badge/keepachangelog-yes-brightgreen.svg)](CHANGELOG.md)
+[![Javadoc](https://img.shields.io/badge/javadoc-yes-brightgreen.svg)](https://jitpack.io/com/github/diffplug/durian-globals/latest/javadoc/)
+[![Live chat](https://img.shields.io/badge/gitter-chat-brightgreen.svg)](https://gitter.im/diffplug/durian-globals)
+[![JitCI](https://jitci.com/gh/diffplug/durian-globals/svg)](https://jitci.com/gh/diffplug/durian-globals)
+<!---freshmark /shields -->
 
 ## Usage
 
