@@ -8,8 +8,10 @@ plugins {
 
 apply from: 干.file('spotless/freshmark.gradle')
 
+allprojects {
+	version = '0.1.2'
+}
 subprojects {
-	version = '0.1.1'
 	apply from: 干.file('base/java8.gradle')
 	apply plugin: 'java-library'
 	if (it.name == 'durian-globals') {
