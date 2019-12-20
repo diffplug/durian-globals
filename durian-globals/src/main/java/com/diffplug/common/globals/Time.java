@@ -21,14 +21,14 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
 
-/** Alias for {@link System#currentTimeMillis}, but can be manipulated within tests by {@link DevTime}. */
+/** Alias for {@link System#currentTimeMillis}, but can be manipulated within tests by {@link TimeDev}. */
 public abstract class Time {
 	// package-private to prevent others from implementing
 	Time() {}
 
 	protected abstract long getNow();
 
-	/** Alias for {@link System#currentTimeMillis}, but can be manipulated within tests by {@link DevTime}. */
+	/** Alias for {@link System#currentTimeMillis}, but can be manipulated within tests by {@link TimeDev}. */
 	public static long now() {
 		return Globals.getOrSetTo(Time.class, Prod::new).getNow();
 	}

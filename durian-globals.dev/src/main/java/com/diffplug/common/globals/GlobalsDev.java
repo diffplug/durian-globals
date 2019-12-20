@@ -15,7 +15,10 @@
  */
 package com.diffplug.common.globals;
 
+/** Mechanism for changing {@link Globals} for the purpose of testing. */
 public class GlobalsDev {
+	private GlobalsDev() {}
+
 	/** Wipes all globals, and returns an AutoCloseable which will wipe them again when closed. */
 	public static AutoCloseable wipe() {
 		Globals.wipe();
