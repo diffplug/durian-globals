@@ -32,3 +32,6 @@ subprojects {
 	apply from: 干.file('base/bintray.gradle')
 	apply from: 干.file('spotless/java.gradle')
 }
+
+ext.javadoc_agg='durian-globals durian-globals.dev'
+apply from: 干.file('base/javadoc-agg.gradle')
