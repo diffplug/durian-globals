@@ -2,10 +2,10 @@ plugins {
 	id 'com.diffplug.blowdryerSetup' version '0.1.0'
 }
 blowdryerSetup {
-	github 'diffplug/blowdryer-diffplug', 'commit', 'f2be9d41ecede6901e9cafb9cb4aa78274c156b8'
+	github 'diffplug/blowdryer-diffplug', 'commit', '0721f9de5fc31659f3bc1fa44b3a04577b60dd1c'
 	//devLocal '../blowdryer-diffplug'
 }
-rootProject.name = 'durian-globals-root'
+rootProject.name = 'durian-globals-agg'
 
 include 'durian-globals'
 include 'durian-globals.dev'
