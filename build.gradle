@@ -3,14 +3,15 @@ plugins {
 	id 'com.diffplug.gradle.spotless' version '3.26.1'
 	id 'com.diffplug.gradle.osgi.bndmanifest' version '3.17.6' apply false
 	id 'com.jfrog.bintray' version '1.8.4' apply false
+	id 'com.diffplug.spotless-changelog' version '0.1.0'
 	id 'com.diffplug.blowdryer'
 }
 
+allprojects {
+	apply from: 干.file('base/changelog.gradle')
+}
 apply from: 干.file('spotless/freshmark.gradle')
 
-allprojects {
-	version = '0.1.2'
-}
 subprojects {
 	apply from: 干.file('base/java8.gradle')
 	apply plugin: 'java-library'
