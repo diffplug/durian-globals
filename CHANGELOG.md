@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [0.1.4] - 2019-12-31
+Test for the fancy publish.
+
 ## [0.1.3] - 2019-12-31
 Attempted to fix JitPack aggregate javadoc.
 

@@ -16,7 +16,7 @@ output = [
 [![Maven central](https://img.shields.io/badge/mavencentral-com.diffplug.durian--globals%3Adurian--globals-blue.svg)](https://search.maven.org/search?q=g:com.diffplug%20AND%20a:durian-globals)
 [![Apache 2.0](https://img.shields.io/badge/license-apache--2.0-blue.svg)](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0))
 
-[![Latest version](https://img.shields.io/badge/latest-0.1.3-brightgreen.svg)](https://jitpack.io/#diffplug/durian-globals)
+[![Latest version](https://img.shields.io/badge/latest-0.1.4-brightgreen.svg)](https://jitpack.io/#diffplug/durian-globals)
 [![Changelog](https://img.shields.io/badge/keepachangelog-yes-brightgreen.svg)](CHANGELOG.md)
 [![Javadoc](https://img.shields.io/badge/javadoc-yes-brightgreen.svg)](https://jitpack.io/com/github/diffplug/durian-globals/latest/javadoc/)
 [![Live chat](https://img.shields.io/badge/gitter-chat-brightgreen.svg)](https://gitter.im/diffplug/durian-globals)
