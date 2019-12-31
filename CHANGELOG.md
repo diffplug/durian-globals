@@ -1,6 +1,8 @@
 # DurianGlobals changelog
 
 ## [Unreleased]
+
+## [0.1.3] - 2019-12-31
 Attempted to fix JitPack aggregate javadoc.
 
 ## [0.1.2] - 2019-12-20
