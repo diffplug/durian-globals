@@ -1,8 +1,23 @@
+pluginManagement {
+	plugins {
+		id 'com.diffplug.blowdryer' version '0.1.0'
+		id 'com.diffplug.blowdryerSetup' version '0.1.0'
+		id 'com.diffplug.gradle.osgi.bndmanifest' version '3.17.6'
+		id 'com.diffplug.gradle.spotless' version '3.27.0'
+		id 'com.diffplug.spotless-changelog' version '0.1.0'
+		id 'com.github.ben-manes.versions' version '0.27.0'
+		id 'com.jfrog.bintray' version '1.8.4'
+	}
+}
 plugins {
-	id 'com.diffplug.blowdryerSetup' version '0.1.0'
+	id 'com.diffplug.blowdryerSetup'
+	id 'com.diffplug.gradle.osgi.bndmanifest' apply false
+	id 'com.diffplug.gradle.spotless' apply false
+	id 'com.diffplug.spotless-changelog' apply false
+	id 'com.jfrog.bintray' apply false
 }
 blowdryerSetup {
-	github 'diffplug/blowdryer-diffplug', 'commit', 'a6d6e4866de2cd8eab41c28e85607dd9b6612737'
+	github 'diffplug/blowdryer-diffplug', 'tag', '2.0.0'
 	//devLocal '../blowdryer-diffplug'
 }
 rootProject.name = 'durian-globals-agg'
