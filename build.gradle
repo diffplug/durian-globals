@@ -18,6 +18,7 @@ subprojects {
 			implementation 'com.diffplug.durian:durian-collect:1.2.0'
 		}
 	} else {
+		assert it.name == 'durian-globals.dev'
 		ext.maven_name='DurianGlobals (Dev API)'
 		ext.maven_desc="Developer API for testable globals (don't ship!)"
 		dependencies {
