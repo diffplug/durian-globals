@@ -14,8 +14,8 @@ output = [
 [![Maven central](https://img.shields.io/badge/mavencentral-com.diffplug.durian--globals%3Adurian--globals-blue.svg)](https://search.maven.org/search?q=g:com.diffplug.durian-globals)
 [![Apache 2.0](https://img.shields.io/badge/license-apache--2.0-blue.svg)](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0))
 
-[![Changelog](https://img.shields.io/badge/changelog-0.1.4-brightgreen.svg)](CHANGELOG.md)
-[![Javadoc](https://img.shields.io/badge/javadoc-yes-brightgreen.svg)](https://javadoc.jitpack.io/com/github/diffplug/durian-globals/durian-globals-agg/release~0.1.4/javadoc/)
+[![Changelog](https://img.shields.io/badge/changelog-1.0.0-brightgreen.svg)](CHANGELOG.md)
+[![Javadoc](https://img.shields.io/badge/javadoc-yes-brightgreen.svg)](https://javadoc.jitpack.io/com/github/diffplug/durian-globals/durian-globals-agg/release~1.0.0/javadoc/)
 [![Live chat](https://img.shields.io/badge/gitter-chat-brightgreen.svg)](https://gitter.im/diffplug/durian)
 [![JitCI](https://jitci.com/gh/diffplug/durian-globals/svg)](https://jitci.com/gh/diffplug/durian-globals)
 <!---freshmark /shields -->
@@ -64,7 +64,7 @@ There are some globals that people frequently want control over during testing.
 
 ### Time
 
-You can use [`public static long Time.now()`](https://javadoc.jitpack.io/com/github/diffplug/durian-globals/durian-globals-agg/release~0.1.4/javadoc/com/diffplug/common/globals/Time.html) as a replacement for `System.currentTimeMillis()`.  And in a test, you can replace it with [`TimeDev`](https://javadoc.jitpack.io/com/github/diffplug/durian-globals/durian-globals-agg/release~0.1.4/javadoc/com/diffplug/common/globals/TimeDev.html).
+You can use [`public static long Time.now()`](https://javadoc.jitpack.io/com/github/diffplug/durian-globals/durian-globals-agg/release~1.0.0/javadoc/com/diffplug/common/globals/Time.html) as a replacement for `System.currentTimeMillis()`.  And in a test, you can replace it with [`TimeDev`](https://javadoc.jitpack.io/com/github/diffplug/durian-globals/durian-globals-agg/release~1.0.0/javadoc/com/diffplug/common/globals/TimeDev.html).
 
 ```java
 @Test

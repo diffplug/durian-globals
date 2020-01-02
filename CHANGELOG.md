@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [1.0.0] - 2020-01-02
+The build has finally stablized - time for 1.0.0!
+
 ## [0.1.4] - 2019-12-31
 Test for the fancy publish.
 
