@@ -22,6 +22,8 @@ output = [
 
 <!---freshmark javadoc
 output = prefixDelimiterReplace(input, 'https://javadoc.jitpack.io/com/github/diffplug/durian-globals/durian-globals-agg/release~', '/', versionLast)
+output = prefixDelimiterReplace(output, "'com.diffplug.durian-globals:durian-globals:", "'", versionLast)
+output = prefixDelimiterReplace(output, "'com.diffplug.durian-globals:durian-globals.dev:", "'", versionLast)
 -->
 
 ## Usage
@@ -58,6 +60,15 @@ public class SingletonTest {
 }
 ```
 
+The "trick" is that `GlobalsDev` is shipped in a different artifact than the rest, so you can be sure that your `Globals` can only be changed in tests, and never in production code:
+
+```gradle
+dependencies {
+  implementation     'com.diffplug.durian-globals:durian-globals:1.0.0'
+  testImplementation 'com.diffplug.durian-globals:durian-globals.dev:1.0.0'
+}
+```
+
 ## Built-ins
 
 There are some globals that people frequently want control over during testing.
@@ -82,6 +93,12 @@ public void someTimeDependentTest() {
 ## Requirements
 
 DurianGlobals requires nothing but Java 8+.
+
+## In the wild
+
+- Integration testing the [spotless-changelog](https://github.com/diffplug/spotless-changelog) gradle plugin
+  - [build setup](https://github.com/diffplug/spotless-changelog/blob/c6c66eb12e5ce8a23d42fcb34ef3753382ee4cb4/build.gradle#L52-L54)
+  - [integration code](https://github.com/diffplug/spotless-changelog/blob/11fb5f5cd13921f8ecf8151092fdbad44b6f3004/spotless-changelog-plugin-gradle/src/test/java/com/diffplug/spotless/changelog/gradle/ChangelogPluginTest.java#L33-L34)
 
 ## Acknowledgements
 
